@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  match '/scan_code' => 'users#scan_code_get', via: :get 
-  match '/scan_code' => 'users#scan_code_post', via: :post
+  root 'users#index'
+
+  get '/scan_code' => 'users#scan_code_get', via: :get 
+  post '/scan_code' => 'users#scan_code_post', via: :post
 
   resources :users
   # The priority is based upon order of creation: first created -> highest priority.
