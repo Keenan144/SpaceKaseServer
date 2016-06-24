@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  match '/scan_code' => 'code_scan#scan_code_get', via: :get 
+  match '/scan_code' => 'code_scan#scan_code_post', via: :post
+  
+  resources :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
